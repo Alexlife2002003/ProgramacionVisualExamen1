@@ -32,5 +32,11 @@ namespace Models
             blackList.Add("33");
             blackList.Add("35");
         }
+
+        public List<String > List
+        {
+            get { return blackList; }
+            set { blackList = value; }
+        }
     }
 }

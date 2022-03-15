@@ -33,5 +33,11 @@ namespace Models
             redList.Add("36");
 
         }
+
+        public List<String> List
+        {
+            set { redList = value; }
+            get { return redList; }
+        } 
     }
 }
