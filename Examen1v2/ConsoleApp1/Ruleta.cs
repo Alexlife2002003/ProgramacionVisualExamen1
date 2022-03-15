@@ -76,8 +76,8 @@ namespace roullete
                             dinero = 300 - dinero;
                             Console.WriteLine("Usted ha perdido " + dinero);
                         }
+                        Console.WriteLine("Presione 'Enter' para continuar");
                         Console.ReadLine();
-                        Console.WriteLine("Retirarse");
                         break;
 
 
@@ -97,6 +97,7 @@ namespace roullete
             {
                 Console.Write(item.ToString()+"\n");
             }
+            Console.WriteLine("Presione 'Enter' para continuar");
             Console.ReadLine();
         }
         public void showMenuApostar()
@@ -162,7 +163,6 @@ namespace roullete
             {
                 negros++;
             }
-            Console.WriteLine("Ganador: " + ganador + " Eleccion: " + eleccion);
             if (ganador==eleccion)
             {
                 balance = balance + (apostar * 2);
@@ -170,17 +170,17 @@ namespace roullete
                 Tiros tiro = new Tiros(tiroActual, ruleta, apostar, "ganado", "Apuesta por parImpar");
                 _tiros.Add(tiro);
                 Console.WriteLine("Ha ganado la apuesta");
-                Console.ReadLine();
             }
             else
             {
                 Tiros tiro = new Tiros(tiroActual, ruleta, apostar, "perdido", "Apuesta por parImpar");
                 _tiros.Add(tiro);
                 Console.WriteLine("Ha perdido la apuesta");
-                Console.ReadLine();
             }
-            
-           
+            Console.WriteLine("Presione 'Enter' para continuar");
+            Console.ReadLine();
+
+
 
         }
 
@@ -206,11 +206,13 @@ namespace roullete
                 case 1:
                     int balance = jugador.Dinero;
                     Console.WriteLine("Su balance actual es de " + balance);
+                    Console.WriteLine("Presione 'Enter' para continuar");
                     Console.ReadLine();
                     showMenuEstadisticas();
                     break;
                 case 2:
                     Console.WriteLine("La cantidad de tiros realizados son:"+tiroActual);
+                    Console.WriteLine("Presione 'Enter' para continuar");
                     Console.ReadLine();
                     showMenuEstadisticas();
                     break;
@@ -224,21 +226,25 @@ namespace roullete
                     break;
                 case 5:
                     Console.WriteLine("La cantidad de resultados rojos son:" + rojos);
+                    Console.WriteLine("Presione 'Enter' para continuar");
                     Console.ReadLine();
                     showMenuEstadisticas();
                     break;
                 case 6:
                     Console.WriteLine("La cantidad de resultados negros son :" + negros);
+                    Console.WriteLine("Presione 'Enter' para continuar");
                     Console.ReadLine();
                     showMenuEstadisticas();
                     break;
                 case 7:
                     Console.WriteLine("La cantidad de resultados pares son :" + par);
+                    Console.WriteLine("Presione 'Enter' para continuar");
                     Console.ReadLine();
                     showMenuEstadisticas();
                     break;
                 case 8:
                     Console.WriteLine("La cantidad de resultados pares son :" + impar);
+                    Console.WriteLine("Presione 'Enter' para continuar");
                     Console.ReadLine();
                     showMenuEstadisticas();
                     break;
@@ -258,6 +264,7 @@ namespace roullete
             {
                 Console.WriteLine(item.ToString());
             }
+            Console.WriteLine("Presione 'Enter' para continuar");
             Console.ReadLine();
         }
 
@@ -270,6 +277,7 @@ namespace roullete
             {
                 Console.WriteLine(item.ToString());
             }
+            Console.WriteLine("Presione 'Enter' para continuar");
             Console.ReadLine();
         }
 
@@ -308,15 +316,17 @@ namespace roullete
                 Tiros tiro = new Tiros(tiroActual, ruleta, apostar, "ganado", "Apuesta por color");
                 _tiros.Add(tiro);
                 Console.WriteLine("Ha ganado la apuesta");
-                Console.ReadLine();
+                
             }
             else
             {
                 Tiros tiro = new Tiros(tiroActual, ruleta, apostar, "perdido", "Apuesta por color");
                 _tiros.Add(tiro);
                 Console.WriteLine("Ha perdido la apuesta");
-                Console.ReadLine();
+                
             }
+            Console.WriteLine("Presione 'Enter' para continuar");
+            Console.ReadLine();
         }
 
         public string EscogerParImpar()
@@ -468,7 +478,7 @@ namespace roullete
                 Tiros tiro = new Tiros(tiroActual, ruleta, apostar, "ganado", "Numero Especifico");
                 _tiros.Add(tiro);
                 Console.WriteLine("Ha ganado la apuesta");
-                Console.ReadLine();
+                
 
             }
             else
@@ -476,10 +486,12 @@ namespace roullete
                 Tiros tiro = new Tiros(tiroActual, ruleta, apostar, "perdido", "Numero Especifico");
                 _tiros.Add(tiro);
                 Console.WriteLine("Ha perdido la apuesta");
-                Console.ReadLine();
+                
             }
-            
-            
+            Console.WriteLine("Presione 'Enter' para continuar");
+            Console.ReadLine();
+
+
 
         }
 
